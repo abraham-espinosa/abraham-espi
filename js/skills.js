@@ -1,38 +1,30 @@
-fetch('js/skills.json')
-  .then(function (response) {
+fetch("js/skills.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Could not load skills data.");
+    }
     return response.json();
   })
-  .then(function (jsonObject) {
-    console.table(jsonObject); 
-    const skills = jsonObject['skills'];
-    for (let i = 0; i < skills.length; i++) {
-        let card = document.createElement('section');
+  .then(({ groups }) => {
+    const skillGroups = document.querySelector(".skill-groups");
 
-        let title = document.createElement('p');
-        let urlSvg = document.createElement('img');
-        let div = document.createElement('div');
+    groups.forEach((group) => {
+      const section = document.createElement("section");
+      const heading = document.createElement("h3");
+      const list = document.createElement("ul");
 
-        if (skills[i].category == 'Proficiency'){
-            title.innerHTML = skills[i].title;
-            urlSvg.src = skills[i].urlSvg;
-            urlSvg.alt = skills[i].title + '-logo'; 
-            div.appendChild(urlSvg);
-            div.appendChild(title);
-            
-            card.appendChild(div);
-    
-            document.querySelector('div.cards-proficiency').appendChild(card);      
-            }else{
-            title.innerHTML = skills[i].title;
-            urlSvg.src = skills[i].urlSvg;
-            urlSvg.alt = skills[i].title + '-logo';
-            div.appendChild(urlSvg);
-            div.appendChild(title);
-            
-            card.appendChild(div);
-    
-            document.querySelector('div.cards-familiar').appendChild(card);
-            }
-    }
+      section.className = "skill-group";
+      heading.textContent = group.title;
+      group.items.forEach((skill) => {
+        const item = document.createElement("li");
+        item.textContent = skill;
+        list.appendChild(item);
+      });
 
+      section.append(heading, list);
+      skillGroups.appendChild(section);
+    });
+  })
+  .catch((error) => {
+    document.querySelector(".skill-groups").textContent = error.message;
   });

@@ -1,63 +1,63 @@
-// FETCH THE DATA FROM projects.json
-fetch('js/projects.json')
-  .then(function (response) {
+fetch("js/projects.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Could not load project data.");
+    }
     return response.json();
   })
-  .then(function (jsonObject) {
-    console.table(jsonObject); 
-    const projects = jsonObject['projects'];
-    for (let i = 0; i < projects.length; i++) {
-        let card = document.createElement('section');
-        let title = document.createElement('h3');
-        let description = document.createElement('p');
-        let technologies = document.createElement('p');
+  .then(({ projects }) => {
+    const projectList = document.querySelector(".project-list");
 
-        let aSite = document.createElement('a');
-        let aGithub = document.createElement('a');
+    projects.forEach((project, index) => {
+      const entry = document.createElement("article");
+      const number = document.createElement("span");
+      const heading = document.createElement("div");
+      const category = document.createElement("p");
+      const title = document.createElement("h3");
+      const details = document.createElement("div");
+      const description = document.createElement("p");
+      const technologies = document.createElement("ul");
+      const links = document.createElement("div");
 
-        let siteImg = document.createElement('img');
-        let githubImg = document.createElement('img');
+      entry.className = "project-entry";
+      number.className = "project-number";
+      number.textContent = String(index + 1).padStart(2, "0");
+      heading.className = "project-heading";
+      category.className = "project-type";
+      category.textContent = project.category;
+      title.textContent = project.title;
+      details.className = "project-details";
+      description.className = "project-description";
+      description.textContent = project.description;
+      technologies.className = "project-stack";
 
-        let aYoutube = document.createElement('a');
-        let youtubeImg = document.createElement('img');
+      project.technologies.forEach((technology) => {
+        const item = document.createElement("li");
+        item.textContent = technology;
+        technologies.appendChild(item);
+      });
 
-        let div = document.createElement('div');
+      links.className = "project-links";
+      project.links.forEach((projectLink) => {
+        const link = document.createElement("a");
+        link.href = projectLink.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = projectLink.label;
 
-        title.textContent = projects[i].title;
-        description.innerHTML = projects[i].description;
-        technologies.innerHTML = projects[i].technologies;
+        const arrow = document.createElement("span");
+        arrow.setAttribute("aria-hidden", "true");
+        arrow.textContent = "\u2197";
+        link.appendChild(arrow);
+        links.appendChild(link);
+      });
 
-        aSite.href = projects[i].siteUrl;
-        aSite.target = "_blank";
-        siteImg.src = projects[i].siteImg;
-        siteImg.alt = "site-logo"
-        aSite.appendChild(siteImg);
-
-        aGithub.href = projects[i].githubUrl;
-        aGithub.target = "_blank";
-        githubImg.src = projects[i].githubImg;
-        githubImg.alt = "site-logo"
-        aGithub.appendChild(githubImg);
-
-        aYoutube.href = projects[i].youtubeUrl;
-        aYoutube.target = "_blank";
-        youtubeImg.src = projects[i].youtubeImg;
-        youtubeImg.alt = "youtube-logo"
-        aYoutube.appendChild(youtubeImg);
-
-        div.appendChild(title);
-        div.appendChild(description);
-        div.appendChild(technologies);
-        if (projects[i].siteUrl != "") {
-          div.appendChild(aSite);
-        }
-        div.appendChild(aGithub);
-        div.appendChild(aYoutube);
-        
-
-        card.appendChild(div);
-
-        document.querySelector('div.cards-project').appendChild(card);
-    }
-
+      heading.append(category, title);
+      details.append(description, technologies, links);
+      entry.append(number, heading, details);
+      projectList.appendChild(entry);
+    });
+  })
+  .catch((error) => {
+    document.querySelector(".project-list").textContent = error.message;
   });

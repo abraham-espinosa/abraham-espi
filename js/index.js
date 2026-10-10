@@ -1,24 +1,16 @@
-document.getElementById('year').innerHTML = new Date().getFullYear();
-document.getElementById('last-update').innerHTML = "Last Updated: " + document.lastModified;
+document.getElementById("year").textContent = new Date().getFullYear();
 
-// SCROLL TO TOP ----------------------------------------------------------------
-// Get element by id
-let scrollBtn = document.getElementById("scrollBtn");
+const backToTop = document.querySelector(".back-to-top");
 
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
+function updateBackToTop() {
+    backToTop.hidden = window.scrollY < 500;
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function scrollTopFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+window.addEventListener("scroll", updateBackToTop, { passive: true });
+updateBackToTop();
+
+backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 

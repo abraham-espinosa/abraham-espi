@@ -1,14 +1,16 @@
-<h1 align="center">Hi <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> I'm Abraham Espinosa</h1>
+# Abraham Espinosa - Portfolio
 
-### About Me 
-I am a software developer with a Bachelor of Science in Applied Technology and multiple web development and programming certificates from Brigham Young University - Idaho. I have a passion for creating innovative and user-friendly solutions that streamline complex processes and enhance customer satisfaction.
-<br>
+Personal portfolio for Abraham Espinosa, a Mexico City-based software developer. The site highlights professional experience, selected projects, skills, and contact links using details from the current software developer CV.
 
-### Technologies:
-Proficiency: PHP / JavaScript / CodeIgniter 4 / SQL / NoSQL / HTML / CSS / Git  
-Familiar: C# / Dotnet / NodeJS / Java
-<br>
+## Project structure
 
-### Personal Portafolio:
-https://abraham-espinosa.site
+- `index.html` - portfolio content and semantic page structure
+- `css/` - responsive styles
+- `js/` - page interactions and JSON-backed content rendering
+- `js/projects.json` - selected project details
+- `js/skills.json` - grouped skills and tools
+- `files/Abraham_Espinosa_CV_Software_Developer.pdf` - résumé
+- `images/` and `svg/` - portrait and supporting icons
+
+Live site: [abraham-espi.onrender.com](https://abraham-espi.onrender.com)
 

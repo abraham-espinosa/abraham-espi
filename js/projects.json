@@ -1,70 +1,80 @@
 {
-    "projects": [
-      {
-        "title": "Marvel Characters",
-        "description": " Developed a full-stack web application that implements MVC and CRUD architectures to consume Marvel API characters and display them, allowing users to create new characters and update-delete the existing ones.",
-        "githubUrl": "https://github.com/abraham-espinosa/marvel-codeigniter4",
-        "githubImg": "svg/github.svg",
-        "siteUrl": "",
-        "siteImg": "svg/link.svg",
-        "youtubeUrl": "",
-        "youtubeImg": "svg/youtube.svg",
-        "technologies": "Java, SpringBoot, React, JavaScript, MongoDB"
-      },
-      {
-        "title": "PHP Motors",
-        "description": " Constructed a dynamic website that allows users to authenticate and create reviews. Used sessions and cookies to log in.",
-        "githubUrl": "https://github.com/abraham-espinosa/phpmotors",
-        "githubImg": "svg/github.svg",
-        "siteUrl": "",
-        "siteImg": "svg/link.svg",
-        "youtubeUrl": "https://youtu.be/CkI6kdF47Fs",
-        "youtubeImg": "svg/youtube.svg",
-        "technologies": "PHP, MySQL, HTML/CSS"
-      },
-      {
-        "title": "Disney Movies",
-        "description": "Developed a full-stack web application that displays famous Disney movies and allows users to create movie reviews. Created a RESTfu1l API (<a href='https://github.com/abraham-espinosa/disney-movies-api'>GitHub Repository</a> - <a href='https://api-disneymovies.onrender.com'>Live API</a>) enabling data to be stored in an online database and built a website to consume the RESTful API.",
-        "githubUrl": "https://github.com/abraham-espinosa/disney-movies",
-        "githubImg": "svg/github.svg",
-        "siteUrl": "https://disneymovies.onrender.com",
-        "siteImg": "svg/link.svg",
-        "youtubeUrl": "https://youtu.be/NikOaktiM8Q",
-        "youtubeImg": "svg/youtube.svg",
-        "technologies": "Java, SpringBoot, React, JavaScript, MongoDB"
-      },
-      {
-        "title": "Flowers E-commerce",
-        "description": "Developed an e-commerce website that allows users to authenticate and interact with products and services. Implemented a transactional email API service to reset the account password.",
-        "githubUrl": "https://github.com/abraham-espinosa/flowers-ecommerce",
-        "githubImg": "svg/github.svg",
-        "siteUrl": "",
-        "siteImg": "svg/link.svg",
-        "youtubeUrl": "https://youtu.be/Y8fh4oB31TQ",
-        "youtubeImg": "svg/youtube.svg",
-        "technologies": "NodeJS, Express, EJS, Mailgun, MongoDB"
-      },
-      {
-        "title": "Syphus Budget",
-        "description": "Developed a mobile application with a class team that assists users in tracking cash flow (income and expenses).",
-        "githubUrl": "#",
-        "githubImg": "svg/github.svg",
-        "siteUrl": "",
-        "siteImg": "svg/link.svg",
-        "youtubeUrl": "https://youtu.be/epf8qTLXmHY",
-        "youtubeImg": "svg/youtube.svg",
-        "technologies": "Java, Firebase"
-      },
-      {
-        "title": "Income & Expense Tracker",
-        "description": "Created a JavaScript application that tracks users’ income and expenses. Implemented localStorage property to save records in the browser.",
-        "githubUrl": "https://github.com/abraham-espinosa/income-expense-tracker",
-        "githubImg": "svg/github.svg",
-        "siteUrl": "https://aeg-income-expense-tracker.netlify.app/",
-        "siteImg": "svg/link.svg",
-        "youtubeUrl": "https://youtu.be/Qd3eJQJHd3M",
-        "youtubeImg": "svg/youtube.svg",
-        "technologies": "JavaScript, HTML/CSS"
-      }
-    ]
-  }
+  "projects": [
+    {
+      "title": "Marvel API Explorer",
+      "category": "Full-stack web application",
+      "description": "An MVC application that consumes the Marvel REST API and supports dynamic create, read, update, and delete workflows for character records.",
+      "technologies": ["PHP", "CodeIgniter 4", "MySQL", "Bootstrap"],
+      "links": [
+        {
+          "label": "View source code",
+          "url": "https://github.com/abraham-espinosa/marvel-codeigniter4"
+        }
+      ]
+    },
+    {
+      "title": "Flowers E-Commerce",
+      "category": "Full-stack web application",
+      "description": "An e-commerce application with separate admin product-management and customer order flows, secure sign-in, and transactional emails for password recovery.",
+      "technologies": ["Node.js", "Express", "MongoDB", "EJS", "Mailgun"],
+      "links": [
+        {
+          "label": "View source code",
+          "url": "https://github.com/abraham-espinosa/flowers-ecommerce"
+        },
+        {
+          "label": "Watch project demo",
+          "url": "https://youtu.be/Y8fh4oB31TQ"
+        }
+      ]
+    },
+    {
+      "title": "Syphus Budget",
+      "category": "University class project",
+      "description": "A team-built mobile app for tracking income and expenses, created as a university class project.",
+      "technologies": ["Java", "Firebase"],
+      "links": [
+        {
+          "label": "Watch project demo",
+          "url": "https://youtu.be/epf8qTLXmHY"
+        }
+      ]
+    },
+    {
+      "title": "PHP Motors",
+      "category": "University class project",
+      "description": "A dynamic website with user sign-in and vehicle reviews. The university class project used sessions and cookies to manage authenticated users.",
+      "technologies": ["PHP", "MySQL", "HTML", "CSS"],
+      "links": [
+        {
+          "label": "View source code",
+          "url": "https://github.com/abraham-espinosa/phpmotors"
+        },
+        {
+          "label": "Watch project demo",
+          "url": "https://youtu.be/CkI6kdF47Fs"
+        }
+      ]
+    },
+    {
+      "title": "Income & Expense Tracker",
+      "category": "University class project",
+      "description": "A university class project that tracks income and expenses and saves entries in the browser with localStorage.",
+      "technologies": ["JavaScript", "HTML", "CSS", "localStorage"],
+      "links": [
+        {
+          "label": "View source code",
+          "url": "https://github.com/abraham-espinosa/income-expense-tracker"
+        },
+        {
+          "label": "Visit live project",
+          "url": "https://aeg-income-expense-tracker.netlify.app/"
+        },
+        {
+          "label": "Watch project demo",
+          "url": "https://youtu.be/Qd3eJQJHd3M"
+        }
+      ]
+    }
+  ]
+}

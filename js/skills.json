@@ -1,64 +1,20 @@
 {
-    "skills": [
-      {
-        "title": "PHP",
-        "urlSvg": "svg/php.svg",
-        "category": "Proficiency"
-      },
-      {
-        "title": "JavaScript",
-        "urlSvg": "svg/javascript.svg",
-        "category": "Proficiency"
-      },
-      {
-        "title": "CodeIgniter4",
-        "urlSvg": "svg/ci4.svg",
-        "category": "Proficiency"
-      },
-      {
-        "title": "Git",
-        "urlSvg": "svg/git.svg",
-        "category": "Proficiency"
-      },
-      {
-        "title": "SQL",
-        "urlSvg": "svg/sql.svg",
-        "category": "Proficiency"
-      },
-      {
-        "title": "NoSQL",
-        "urlSvg": "svg/mongo.svg",
-        "category": "Proficiency"
-      },
-      {
-        "title": "HTML",
-        "urlSvg": "svg/html.svg",
-        "category": "Proficiency"
-      },
-      {
-        "title": "CSS",
-        "urlSvg": "svg/css.svg",
-        "category": "Proficiency"
-      },
-      {
-        "title": "C#",
-        "urlSvg": "svg/c-sharp.svg",
-        "category": "Familiar"
-      },
-      {
-        "title": "Dotnet",
-        "urlSvg": "svg/dotnet.svg",
-        "category": "Familiar"
-      },
-      {
-        "title": "NodeJS",
-        "urlSvg": "svg/node.svg",
-        "category": "Familiar"
-      },
-      {
-        "title": "Java",
-        "urlSvg": "svg/java.svg",
-        "category": "Familiar"
-      }
-    ]
-  }
+  "groups": [
+    {
+      "title": "Languages & frameworks",
+      "items": ["PHP", "CodeIgniter 4", "JavaScript", "Bootstrap", "HTML", "CSS", "Node.js (familiar)"]
+    },
+    {
+      "title": "Data & databases",
+      "items": ["MySQL", "MongoDB", "Relational data modeling", "Migrations", "Seeders"]
+    },
+    {
+      "title": "Engineering practices",
+      "items": ["Agile collaboration", "Git", "QA coordination", "Docker", "CRUD", "MVC", "Requirements analysis"]
+    },
+    {
+      "title": "Business & reporting tools",
+      "items": ["Microsoft Excel", "Microsoft Access", "Power BI", "Microsoft Power Platform"]
+    }
+  ]
+}
